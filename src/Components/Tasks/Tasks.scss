@@ -1,0 +1,77 @@
+.task {
+  display: flex;
+  align-items: center;
+  background-color: var(--tertiary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #333333;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__complete {
+    text-decoration: line-through;
+    color: red;
+
+    input {
+      opacity: 0.6;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    svg {
+      cursor: pointer;
+      color: var(--gray);
+    }
+  }
+
+  input[type="text"] {
+    flex-grow: 1;
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input[type="checkbox"] {
+    display: grid;
+    place-content: center;
+    appearance: none;
+    background-color: var(--tertiary);
+    cursor: pointer;
+    margin: 0;
+    font: inherit;
+    color: var(--blue);
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 100%;
+    transform: translateY(-0.075em);
+
+    &::before {
+      content: "";
+      width: 0.65em;
+      height: 0.65em;
+      border-radius: 100%;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em var(--blue);
+      background-color: CanvasText;
+    }
+
+    &:checked {
+      &::before {
+        transform: scale(1);
+      }
+    }
+  }
+}

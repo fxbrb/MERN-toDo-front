@@ -1,0 +1,88 @@
+.auth {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  color: var(--white);
+
+  &__logo {
+    font-size: 2rem;
+    background-color: red;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+
+  &__container {
+    max-width: 500px;
+    width: 100%;
+    padding: 50px;
+    border-radius: 0.5rem;
+    background-color: var(--secondary);
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+    }
+
+    input {
+      background-color: var(--primary);
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      border: none;
+      color: var(--white);
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 20px;
+
+    button {
+      font-weight: 600;
+    }
+  }
+
+  &__errors {
+    color: var(--red);
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+  &__link {
+    margin-top: 20px;
+
+    p {
+      font-size: 0.8rem;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 700;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

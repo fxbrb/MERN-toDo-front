@@ -1,0 +1,127 @@
+.Account {
+  width: 100%;
+  margin-top: 30px;
+
+  &__title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &__group {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      margin-bottom: 7px;
+      color: var(--white);
+    }
+
+    input {
+      background-color: var(--secondary);
+      border: 1px solid #333333;
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      color: var(--white);
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .avatar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .separator {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__files {
+    display: flex;
+    align-items: center;
+
+    input {
+      background: none;
+      border: none;
+      width: fit-content;
+    }
+  }
+
+  &__bottom {
+    button {
+      width: fit-content;
+    }
+  }
+
+  &__removed {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 500px;
+    margin: 0 auto;
+
+    button {
+      width: fit-content;
+      background-color: var(--red);
+      border: 1px solid var(--red);
+
+      &:hover {
+        background-color: transparent;
+        color: var(--red);
+      }
+    }
+  }
+
+  &__file-input {
+    margin-bottom: 0.5rem;
+    .file-input__input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .file-input__label {
+      min-width: 150px;
+      cursor: pointer;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      color: var(--white);
+      font-size: 14px;
+      padding: 10px 12px;
+      border: 1px solid #333333;
+      background-color: var(--secondary);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      svg {
+        height: 16px;
+        margin-right: 4px;
+      }
+    }
+  }
+}

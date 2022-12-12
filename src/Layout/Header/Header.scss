@@ -1,0 +1,56 @@
+.Header {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__left {
+    a {
+      font-weight: 700;
+      font-size: 1.2rem;
+      transition: all 0.4s ease;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      font-size: 0.8rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 0;
+        height: 1.5px;
+        position: absolute;
+        bottom: -3px;
+        right: 0;
+        transition: width 0.3s;
+        background-color: var(--white);
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+
+    button {
+      width: fit-content;
+    }
+  }
+}

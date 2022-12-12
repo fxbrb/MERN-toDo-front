@@ -1,0 +1,44 @@
+.new {
+  &__container {
+    display: flex;
+    gap: 30px;
+
+    input {
+      flex: 1;
+      background-color: var(--tertiary);
+      border: 1px solid var(--secondary);
+      color: var(--white);
+      padding: 1rem;
+      border-radius: 0.5rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+
+      &:disabled {
+        opacity: 0.6;
+      }
+
+      span {
+        margin: 0 5px;
+        font-weight: 700;
+
+        &:nth-child(2) {
+          border: 1px solid var(--white);
+          border-radius: 100%;
+          width: 15px;
+          height: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
